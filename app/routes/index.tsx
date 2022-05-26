@@ -1,7 +1,7 @@
 export default function Index() {
   return (
     <main>
-      <h1>Wilman Barrios</h1>
+      <h1 className="text-4xl font-bold">Wilman Barrios</h1>
     </main>
   );
 }
