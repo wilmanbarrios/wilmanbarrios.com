@@ -2,26 +2,40 @@ import type { LoaderFunction } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import { marked } from "marked";
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
-type LoaderData = { me: string; };
+type LoaderData = { page: string };
 
 export const loader: LoaderFunction = async () => {
-  let file = fs.readFileSync(path.resolve('./app/data/me.md'), "utf8");
-  let me = marked(file)
+  let file = fs.readFileSync(path.resolve("./app/data/es.md"), "utf-8");
 
   return json<LoaderData>({
-    me,
-  })
+    page: marked(file),
+  });
 };
 
 export default function Index() {
-  let { me } = useLoaderData<LoaderData>();
+  let { page } = useLoaderData<LoaderData>();
   return (
-    <main className="flex flex-col h-screen px-6 pt-8 antialiased text-gray-800 md:max-w-xl md:mx-auto md:pt-10 xl:max-w-2xl">
-      <h1 className="text-4xl font-black mb-6">Wilman Barrios</h1>
-      <div className="prose prose-sky pb-8 md:pb-10" dangerouslySetInnerHTML={{ __html: me }} />
+    <main className="flex flex-col h-screen px-6 pt-12 antialiased md:p-0 md:max-w-xl md:mx-auto md:pt-10">
+      <div className="flex flex-col items-center justify-center mb-6">
+        <div className="p-1 rounded-full bg-gradient-to-b from-white via-white to-black/10 shadow-md ring-1 ring-black/5">
+          <img
+            src="/profile_image.jpg"
+            loading="lazy"
+            alt="Wilman Barrios avatar"
+            className="rounded-full object-cover w-36 h-36"
+          />
+        </div>
+        <h1 className="text-4xl font-black text-gray-800 mt-4">
+          Wilman Barrios
+        </h1>
+      </div>
+      <div
+        className="prose prose-sky w-full pb-8 md:pb-10 text-gray-800"
+        dangerouslySetInnerHTML={{ __html: page }}
+      />
     </main>
   );
 }
