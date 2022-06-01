@@ -1,5 +1,7 @@
 {
   "functions": {
-    "includeFile": "data/**"
+    "api/es.md": {
+      "includeFiles": "data/**"
+    }
   }
 }
