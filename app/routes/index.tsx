@@ -8,7 +8,7 @@ import path from "path";
 type LoaderData = { page: string };
 
 export const loader: LoaderFunction = async () => {
-  let file = fs.readFileSync(path.resolve("./app/data/es.md"), "utf-8");
+  let file = fs.readFileSync(path.resolve("app/data", "es.md"), "utf-8");
 
   return json<LoaderData>({
     page: marked(file),
