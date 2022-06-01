@@ -5,22 +5,20 @@ import { marked } from "marked";
 import fs from "fs";
 import path from "path";
 
-type LoaderData = { page: string; x: string };
+type LoaderData = { page: string };
 
 export const loader: LoaderFunction = async () => {
-  // let file = fs.readFileSync(path.resolve("app/data", "es.md"), "utf-8");
+  let file = fs.readFileSync(path.join(__dirname, "es.md"), "utf8");
 
   return json<LoaderData>({
-    page: "",
-    x: path.join(__dirname, "../..", "app/data/es.md")
+    page: marked(file),
   });
 };
 
 export default function Index() {
-  let { page, x } = useLoaderData<LoaderData>();
+  let { page } = useLoaderData<LoaderData>();
   return (
     <main className="flex flex-col h-screen px-6 pt-12 md:p-0 md:max-w-xl md:mx-auto md:pt-10">
-      <pre>{x}</pre>
       <div className="flex flex-col items-center justify-center mb-6">
         <div className="p-1 rounded-full bg-gradient-to-b from-white via-white to-black/10 shadow-md ring-1 ring-black/5">
           <img
