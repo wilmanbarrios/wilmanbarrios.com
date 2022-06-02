@@ -25,6 +25,7 @@ export default function App() {
       <head>
         <Meta />
         <Links />
+        <script async src="https://cdn.splitbee.io/sb.js"></script>
       </head>
       <body className="antialiased bg-white">
         <Outlet />
