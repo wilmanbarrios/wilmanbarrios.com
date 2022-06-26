@@ -1,34 +1,73 @@
-# Welcome to Remix!
+# My personal website
 
-- [Remix Docs](https://remix.run/docs)
+## FAQ
 
-## Deployment
+### Who you are?
 
-After having run the `create-remix` command and selected "Vercel" as a deployment target, you only need to [import your Git repository](https://vercel.com/new) into Vercel, and it will be deployed.
+I'm Wilman Barrios a full-stack developer.
 
-If you'd like to avoid using a Git repository, you can also deploy the directory by running [Vercel CLI](https://vercel.com/cli):
+### Where are you from?
 
-```sh
-npm i -g vercel
-vercel
-```
+I'm from Puerto La Cruz, Venezuela.
 
-It is generally recommended to use a Git repository, because future commits will then automatically be deployed by Vercel, through its [Git Integration](https://vercel.com/docs/concepts/git).
+### In what kind of projects have you worked in?
 
-## Development
+I'm worked in a varied of projects, from large administrative, selling and
+buying application to application that manage content on internet, connecting
+with multiple RRSS in example: Google, Facebook and Twitter, gathering metrics
+to build performance reports
 
-To run your Remix app locally, make sure your project's local dependencies are installed:
+### What technologies are you specialized in?
 
-```sh
-npm install
-```
+I mostly work with Laravel on the backend and recently I been exploring Node.js
+as an alternative, with technologies like Remix in a serverless architecture
+using Netlify and Vercel.
 
-Afterwards, start the Remix development server like so:
+In the frontend, I like working with modern technologies such as Vue.js and
+React.
 
-```sh
-npm run dev
-```
+For the styles I love working with Tailwind CSS, is always my way to go.
 
-Open up [http://localhost:3000](http://localhost:3000) and you should be ready to go!
+### What was you most recent project about?
 
-If you're used to using the `vercel dev` command provided by [Vercel CLI](https://vercel.com/cli) instead, you can also use that, but it's not needed.
+My most recent project, was an app that help marketers manage content on
+internet. We connect to different RRSS and analytics sites using external APIs,
+to gather meta data of the content. With this information we generate
+performance reports to help with the analysis.
+
+### What technologies were used in your last project?
+
+We used Laravel on the backend, in the frontend we used Vue.js through
+Inertia.js, as primary db MySQL was used and all was deployed on AWS.
+
+### What was your most important and satisfying experience?
+
+Recently I worked in Contegy, an app that help marketers to manage contents on
+RRSS.
+
+In this project we used new technologies to create the best experience to end
+users. Also with connect with several platforms such as Google to access
+Analytics and Youtube, Meta to access Facebook and Instagram, Twitter and many
+more. We also make connections with Zappier, Trello and Asana to further
+increase the range of what the app can do with different workflows
+
+### What motivate you to become a programmer?
+
+When I was a kid, I wanted to be a Lawyer because I was impress on who the
+Lawyer dressed, and the fact that always were in suits, because of that I wanted
+to be Lawyer.
+
+Years later, the first computer came to my life, that was love at first sight
+immediately I wanted to know how a computer works I wanted to know everything
+there was to know about computers.
+
+Later I go to college to study System Engineer, and with this a learned about
+programming.
+
+### With what technologies you would like to work with?
+
+I would like to work with
+
+- Go
+- Rust
+- Solid.js
